@@ -1,11 +1,11 @@
-import './App.css'
-
+import './App.css';
+import CampusNavigator from './ui_component';
 function App() {
 
 
   return (
-    <> <h1>HI</h1></>
-  )
+    <CampusNavigator/>
+ )
 }
 
 export default App

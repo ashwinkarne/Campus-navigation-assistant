@@ -1,0 +1,278 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: #f5f7fb;
+  color: #172033;
+}
+
+.navigator-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+/* Header */
+
+.navigator-header {
+  margin-bottom: 30px;
+}
+
+.small-title {
+  margin: 0 0 7px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #64748b;
+}
+
+.navigator-header h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 750;
+}
+
+.subtitle {
+  margin-top: 10px;
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+/* Search */
+
+.search-card {
+  background: white;
+  border: 1px solid #e5e9f0;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 8px 30px rgba(20, 30, 50, 0.06);
+}
+
+.location-field label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 650;
+  color: #475569;
+}
+
+.location-field select {
+  width: 100%;
+  padding: 14px 15px;
+  border: 1px solid #d9dee8;
+  border-radius: 10px;
+  background: white;
+  color: #172033;
+  font-size: 15px;
+  outline: none;
+  cursor: pointer;
+}
+
+.location-field select:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+/* Arrow between inputs */
+
+.direction-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  margin: 12px auto;
+  border-radius: 50%;
+  background: #f1f3f8;
+  color: #64748b;
+  font-size: 18px;
+}
+
+/* Button */
+
+.route-button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #172033;
+  color: white;
+  font-size: 15px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.route-button:hover {
+  background: #273249;
+}
+
+.route-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Error */
+
+.error-message {
+  margin: 12px 0 0;
+  text-align: center;
+  color: #dc2626;
+  font-size: 14px;
+}
+
+/* Route Section */
+
+.route-section {
+  margin-top: 35px;
+  background: white;
+  border: 1px solid #e5e9f0;
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 8px 30px rgba(20, 30, 50, 0.06);
+}
+
+.route-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.route-header h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.distance-box {
+  text-align: right;
+}
+
+.distance-box span {
+  display: block;
+  font-size: 12px;
+  color: #64748b;
+  margin-bottom: 3px;
+}
+
+.distance-box strong {
+  font-size: 20px;
+}
+
+/* Map */
+
+.route-map {
+  padding: 30px 10px 10px;
+}
+
+.route-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  min-height: 90px;
+}
+
+.route-marker {
+  z-index: 2;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #172033;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.route-content {
+  padding: 8px 0 0 18px;
+}
+
+.route-content h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 650;
+}
+
+.route-label {
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.start-label {
+  color: #16a34a;
+}
+
+.destination-label {
+  color: #2563eb;
+}
+
+/* Vertical line */
+
+.route-line {
+  position: absolute;
+  left: 20px;
+  top: 42px;
+  height: 48px;
+  border-left: 2px dashed #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.route-line span {
+  position: absolute;
+  left: -10px;
+  top: 15px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: white;
+  color: #64748b;
+  font-size: 14px;
+  text-align: center;
+  line-height: 18px;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .navigator-container {
+    padding: 30px 15px;
+  }
+
+  .navigator-header h1 {
+    font-size: 28px;
+  }
+
+  .search-card {
+    padding: 20px;
+  }
+
+  .route-section {
+    padding: 20px;
+  }
+
+  .route-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .distance-box {
+    text-align: left;
+  }
+}
