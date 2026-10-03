@@ -21,7 +21,7 @@ function CampusNavigator() {
   const [error, setError] = useState("");
 
   const findRoute = async () => {
-    // Validate locations
+  
     if (!start || !end) {
       setError("Please select both locations.");
       return;
@@ -55,27 +55,13 @@ function CampusNavigator() {
 
       const data = await response.json();
 
-      // Check API response in browser console
+
       console.log("API Response:", data);
 
       // Set route
       setRoute(data.path || []);
 
-      /*
-        Supports either of these backend responses:
-
-        {
-          "path": ["Main Gate", "Canteen", "Library"],
-          "total_distance": 8
-        }
-
-        OR
-
-        {
-          "path": ["Main Gate", "Canteen", "Library"],
-          "distance": 8
-        }
-      */
+    
 
       const distance = data.total_distance ?? data.distance ?? 0;
 

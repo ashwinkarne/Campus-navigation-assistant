@@ -12,9 +12,7 @@ body {
 }
 
 
-/* =========================
-   MAIN CONTAINER
-========================= */
+
 
 .navigator-container {
   width: 100%;
@@ -24,9 +22,6 @@ body {
 }
 
 
-/* =========================
-   HEADER
-========================= */
 
 .navigator-header {
   margin-bottom: 30px;
@@ -57,9 +52,6 @@ body {
 }
 
 
-/* =========================
-   SEARCH CARD
-========================= */
 
 .search-card {
   background: #ffffff;
@@ -124,10 +116,6 @@ body {
   font-weight: 700;
 }
 
-
-/* =========================
-   ROUTE BUTTON
-========================= */
 
 .route-button {
   width: 100%;
