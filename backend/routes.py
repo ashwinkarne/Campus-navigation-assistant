@@ -1,7 +1,12 @@
 from fastapi import APIRouter
-from models import RouteRequest
+from pydantic import BaseModel
 
 router = APIRouter()
+
+
+class RouteRequest(BaseModel):
+    start: str
+    end: str
 
 
 graph = {
@@ -65,6 +70,7 @@ graph = {
     }
 }
 
+
 @router.post("/route")
 def find_route(request: RouteRequest):
 
@@ -76,12 +82,7 @@ def find_route(request: RouteRequest):
             "error": "Invalid location"
         }
 
-    if request.algorithm == "dijkstra":
-        return dijkstra(start, end)
-
-    return {
-        "error": "Algorithm not supported"
-    }
+    return dijkstra(start, end)
 
 
 def dijkstra(start, end):
@@ -117,7 +118,6 @@ def dijkstra(start, end):
             new_distance = distances[current] + distance
 
             if new_distance < distances[neighbor]:
-
                 distances[neighbor] = new_distance
                 previous[neighbor] = current
 
@@ -131,7 +131,6 @@ def dijkstra(start, end):
     path.reverse()
 
     return {
-        "algorithm": "dijkstra",
         "start": start,
         "end": end,
         "distance": distances[end],
