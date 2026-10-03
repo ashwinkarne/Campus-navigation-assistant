@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
 }
@@ -5,152 +6,222 @@
 body {
   margin: 0;
   font-family: Inter, Arial, sans-serif;
-  background: #f5f7fb;
-  color: #172033;
+  background: #f1f5f9;
+  color: #111827;
+  font-size: 16px;
 }
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
 
 .navigator-container {
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
-  padding: 50px 20px;
+  padding: 45px 25px;
 }
 
-/* Header */
+
+/* =========================
+   HEADER
+========================= */
 
 .navigator-header {
   margin-bottom: 30px;
 }
 
 .small-title {
-  margin: 0 0 7px;
-  font-size: 12px;
-  font-weight: 700;
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 800;
   letter-spacing: 1.5px;
-  color: #64748b;
+  color: #4f46e5;
 }
 
 .navigator-header h1 {
   margin: 0;
-  font-size: 36px;
-  font-weight: 750;
+  font-size: 42px;
+  line-height: 1.15;
+  font-weight: 800;
+  color: #0f172a;
 }
 
 .subtitle {
-  margin-top: 10px;
-  color: #64748b;
-  font-size: 15px;
+  margin-top: 12px;
+  color: #475569;
+  font-size: 17px;
   line-height: 1.6;
-  max-width: 600px;
+  max-width: 650px;
 }
 
-/* Search */
+
+/* =========================
+   SEARCH CARD
+========================= */
 
 .search-card {
-  background: white;
-  border: 1px solid #e5e9f0;
+  background: #ffffff;
+  border: 1px solid #dbe2ea;
   border-radius: 18px;
-  padding: 25px;
-  box-shadow: 0 8px 30px rgba(20, 30, 50, 0.06);
+  padding: 28px;
+  box-shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
 }
 
 .location-field label {
   display: block;
-  margin-bottom: 8px;
-  font-size: 13px;
-  font-weight: 650;
-  color: #475569;
+  margin-bottom: 9px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1e293b;
 }
 
 .location-field select {
   width: 100%;
-  padding: 14px 15px;
-  border: 1px solid #d9dee8;
+  min-height: 52px;
+  padding: 13px 15px;
+  border: 1px solid #cbd5e1;
   border-radius: 10px;
-  background: white;
-  color: #172033;
-  font-size: 15px;
+  background: #ffffff;
+  color: #111827;
+  font-size: 16px;
+  font-weight: 500;
   outline: none;
   cursor: pointer;
 }
 
-.location-field select:focus {
-  border-color: #4f46e5;
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+.location-field select:hover {
+  border-color: #94a3b8;
 }
 
-/* Arrow between inputs */
+.location-field select:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+}
+
+
+/* =========================
+   DIRECTION ICON
+========================= */
 
 .direction-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 35px;
-  height: 35px;
-  margin: 12px auto;
+
+  width: 40px;
+  height: 40px;
+
+  margin: 14px auto;
+
   border-radius: 50%;
-  background: #f1f3f8;
-  color: #64748b;
-  font-size: 18px;
+
+  background: #eef2ff;
+  color: #4f46e5;
+
+  font-size: 20px;
+  font-weight: 700;
 }
 
-/* Button */
+
+/* =========================
+   ROUTE BUTTON
+========================= */
 
 .route-button {
   width: 100%;
-  margin-top: 20px;
-  padding: 14px;
+  min-height: 54px;
+
+  margin-top: 22px;
+  padding: 14px 18px;
+
   border: none;
-  border-radius: 10px;
-  background: #172033;
-  color: white;
-  font-size: 15px;
-  font-weight: 650;
+  border-radius: 11px;
+
+  background: #111827;
+  color: #ffffff;
+
+  font-size: 17px;
+  font-weight: 700;
+
   cursor: pointer;
-  transition: 0.2s;
+
+  transition: all 0.2s ease;
 }
 
 .route-button:hover {
-  background: #273249;
+  background: #1f2937;
+  transform: translateY(-1px);
+}
+
+.route-button:active {
+  transform: translateY(0);
 }
 
 .route-button:disabled {
-  opacity: 0.6;
+  opacity: 0.55;
   cursor: not-allowed;
 }
 
-/* Error */
+
+/* =========================
+   ERROR
+========================= */
 
 .error-message {
-  margin: 12px 0 0;
+  margin: 14px 0 0;
+
   text-align: center;
+
   color: #dc2626;
-  font-size: 14px;
+
+  font-size: 15px;
+  font-weight: 600;
 }
 
-/* Route Section */
+
+/* =========================
+   ROUTE SECTION
+========================= */
 
 .route-section {
   margin-top: 35px;
-  background: white;
-  border: 1px solid #e5e9f0;
+
+  background: #ffffff;
+
+  border: 1px solid #dbe2ea;
   border-radius: 18px;
+
   padding: 30px;
-  box-shadow: 0 8px 30px rgba(20, 30, 50, 0.06);
+
+  box-shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
 }
+
+
+/* =========================
+   ROUTE HEADER
+========================= */
 
 .route-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
+
+  gap: 25px;
+
   padding-bottom: 25px;
-  border-bottom: 1px solid #edf0f5;
+
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .route-header h2 {
   margin: 0;
-  font-size: 24px;
+
+  font-size: 26px;
+  font-weight: 800;
+
+  color: #0f172a;
 }
 
 .distance-box {
@@ -159,16 +230,26 @@ body {
 
 .distance-box span {
   display: block;
-  font-size: 12px;
+
+  margin-bottom: 4px;
+
+  font-size: 14px;
+  font-weight: 600;
+
   color: #64748b;
-  margin-bottom: 3px;
 }
 
 .distance-box strong {
-  font-size: 20px;
+  font-size: 23px;
+  font-weight: 800;
+
+  color: #111827;
 }
 
-/* Map */
+
+/* =========================
+   ROUTE MAP
+========================= */
 
 .route-map {
   padding: 30px 10px 10px;
@@ -176,40 +257,69 @@ body {
 
 .route-item {
   position: relative;
+
   display: flex;
   align-items: flex-start;
-  min-height: 90px;
+
+  min-height: 95px;
 }
+
+
+/* =========================
+   ROUTE MARKER
+========================= */
 
 .route-marker {
   z-index: 2;
-  width: 42px;
-  height: 42px;
+
+  width: 44px;
+  height: 44px;
+
   flex-shrink: 0;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   border-radius: 50%;
-  background: #172033;
-  color: white;
-  font-size: 13px;
-  font-weight: 700;
+
+  background: #111827;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.15);
 }
 
+
+/* =========================
+   ROUTE CONTENT
+========================= */
+
 .route-content {
-  padding: 8px 0 0 18px;
+  padding: 7px 0 0 18px;
 }
 
 .route-content h3 {
   margin: 0;
-  font-size: 16px;
-  font-weight: 650;
+
+  font-size: 18px;
+  line-height: 1.4;
+
+  font-weight: 750;
+
+  color: #111827;
 }
 
 .route-label {
   display: inline-block;
-  margin-top: 5px;
-  font-size: 12px;
+
+  margin-top: 6px;
+
+  font-size: 14px;
+  font-weight: 600;
+
   color: #64748b;
 }
 
@@ -221,14 +331,21 @@ body {
   color: #2563eb;
 }
 
-/* Vertical line */
+
+/* =========================
+   VERTICAL ROUTE LINE
+========================= */
 
 .route-line {
   position: absolute;
-  left: 20px;
-  top: 42px;
-  height: 48px;
-  border-left: 2px dashed #cbd5e1;
+
+  left: 21px;
+  top: 44px;
+
+  height: 51px;
+
+  border-left: 2px dashed #94a3b8;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -236,43 +353,242 @@ body {
 
 .route-line span {
   position: absolute;
+
   left: -10px;
-  top: 15px;
+  top: 16px;
+
   width: 18px;
   height: 18px;
+
   border-radius: 50%;
-  background: white;
+
+  background: #ffffff;
+
   color: #64748b;
+
   font-size: 14px;
+
   text-align: center;
   line-height: 18px;
 }
 
-/* Mobile */
 
-@media (max-width: 600px) {
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 700px) {
+
   .navigator-container {
-    padding: 30px 15px;
+    padding: 35px 20px;
   }
 
   .navigator-header h1 {
-    font-size: 28px;
+    font-size: 34px;
   }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  body {
+    font-size: 16px;
+  }
+
+  .navigator-container {
+    padding: 25px 14px;
+  }
+
+
+  /* Header */
+
+  .navigator-header {
+    margin-bottom: 22px;
+  }
+
+  .small-title {
+    font-size: 13px;
+  }
+
+  .navigator-header h1 {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .subtitle {
+    margin-top: 10px;
+
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+
+  /* Search card */
 
   .search-card {
-    padding: 20px;
+    padding: 20px 16px;
+    border-radius: 16px;
   }
+
+  .location-field label {
+    font-size: 15px;
+  }
+
+  .location-field select {
+    min-height: 54px;
+
+    padding: 14px;
+
+    font-size: 16px;
+  }
+
+
+  /* Direction */
+
+  .direction-icon {
+    width: 38px;
+    height: 38px;
+
+    margin: 13px auto;
+
+    font-size: 19px;
+  }
+
+
+  /* Button */
+
+  .route-button {
+    min-height: 56px;
+
+    margin-top: 20px;
+
+    font-size: 17px;
+  }
+
+
+  /* Route */
 
   .route-section {
-    padding: 20px;
+    margin-top: 25px;
+
+    padding: 20px 16px;
+
+    border-radius: 16px;
   }
 
+
+  /* Route header */
+
   .route-header {
-    align-items: flex-start;
     flex-direction: column;
+    align-items: flex-start;
+
+    gap: 15px;
+
+    padding-bottom: 20px;
+  }
+
+  .route-header h2 {
+    font-size: 23px;
   }
 
   .distance-box {
     text-align: left;
   }
+
+  .distance-box span {
+    font-size: 14px;
+  }
+
+  .distance-box strong {
+    font-size: 22px;
+  }
+
+
+  /* Route map */
+
+  .route-map {
+    padding: 25px 3px 5px;
+  }
+
+  .route-item {
+    min-height: 90px;
+  }
+
+
+  /* Marker */
+
+  .route-marker {
+    width: 42px;
+    height: 42px;
+
+    font-size: 13px;
+  }
+
+
+  /* Route text */
+
+  .route-content {
+    padding-left: 15px;
+  }
+
+  .route-content h3 {
+    font-size: 17px;
+  }
+
+  .route-label {
+    font-size: 13px;
+  }
+
+
+  /* Line */
+
+  .route-line {
+    left: 20px;
+    top: 42px;
+    height: 48px;
+  }
+
+}
+
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+
+@media (max-width: 380px) {
+
+  .navigator-container {
+    padding: 20px 12px;
+  }
+
+  .navigator-header h1 {
+    font-size: 27px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+  }
+
+  .search-card {
+    padding: 18px 14px;
+  }
+
+  .route-section {
+    padding: 18px 14px;
+  }
+
+  .route-content h3 {
+    font-size: 16px;
+  }
+
 }
